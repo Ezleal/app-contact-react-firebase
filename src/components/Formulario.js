@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import ListaContactos from './ListaContactos'
 import db from './../firebase/firebaseConfig'
 
 const Formulario = () => {
@@ -27,20 +26,19 @@ const onSubmit = (e) => {
   <>
     <form action='' onSubmit={onSubmit}>
         <Input
-            type='email'
-            name='correo'
-            value={email}
-            onChange={(e) => {setEmail(e.target.value)}}
-            placeholder="Correo"
-        />
-        <Input
             type='text'
             name='nombre'
             value={nombre}
             onChange={(e) => {setNombre(e.target.value)}}
             placeholder="Nombre"
         />
-
+         <Input
+            type='email'
+            name='correo'
+            value={email}
+            onChange={(e) => {setEmail(e.target.value)}}
+            placeholder="Correo"
+        />
         <Boton type='submit'>Agregar</Boton>
     </form>
   </>
